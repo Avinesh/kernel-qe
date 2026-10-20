@@ -126,7 +126,8 @@ syscalls:
       message: Test reported to be too resource hungry for riscv64 software emulation. Maybe related to bsc#1236868
     swapoff01:
     - product: opensuse:Tumbleweed
-      message: known issue with swap on exfat. https://lore.kernel.org/lkml/CAKYAXd_nGWA1UUP3TpVzpB6QpiFkXLMX6au86Agr_haBinwwdA@mail.gmail.com/
+      retry: 2
+      message: retry swapoff01
     swapoff02:
     - product: opensuse:Tumbleweed
       message: known issue with swap on exfat. https://lore.kernel.org/lkml/CAKYAXd_nGWA1UUP3TpVzpB6QpiFkXLMX6au86Agr_haBinwwdA@mail.gmail.com/
@@ -156,6 +157,11 @@ controllers:
       arch: ppc64le
       retval: ^1$
       message: cgroup memory.min protection is unreliable. bsc#1226440
+    memcontrol03:
+    - product: opensuse:Tumbleweed
+      arch: ppc64le
+      retry: 3
+      message: flaky test, running again
 
 openposix:
     pthread_rwlock_rdlock_2-1:
