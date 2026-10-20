@@ -156,6 +156,11 @@ controllers:
       arch: ppc64le
       retval: ^1$
       message: cgroup memory.min protection is unreliable. bsc#1226440
+    memcontrol03:
+    - product: opensuse:Tumbleweed
+      arch: ppc64le
+      retry: 3
+      message: flaky test, running again
 
 openposix:
     pthread_rwlock_rdlock_2-1:
