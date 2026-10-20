@@ -114,11 +114,11 @@ net.tirpc_tests:
 syscalls:
     epoll_wait02:
     - product: opensuse:Tumbleweed
-      arch: ^(aarch64|riscv64)$
+      arch: riscv64$
       message: epoll_pwait() oversleeps by a random amount. bsc#1236868
     epoll_pwait03:
     - product: opensuse:Tumbleweed
-      arch: ^(aarch64|riscv64)$
+      arch: riscv64$
       message: epoll_pwait() oversleeps by a random amount. bsc#1236868
     prctl09:
     - product: opensuse:Tumbleweed
