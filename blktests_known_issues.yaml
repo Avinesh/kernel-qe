@@ -5,3 +5,7 @@ blktests:
   - product: opensuse:Tumbleweed
     skip: 1
     message: Unstable, makes udev too busy. poo#204738
+  loop/007:
+  - product: opensuse:Tumbleweed
+    skip: 1
+    message: e2fsprogs issue, fixed upstream, skip till package update in factory. poo#209217
